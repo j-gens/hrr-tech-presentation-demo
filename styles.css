@@ -1,0 +1,11 @@
+body {
+  text-align: justify;
+}
+
+div {
+  margin: 20px;
+  padding: 10px;
+  border: solid 3px darkgreen;
+  background: whitesmoke;
+}
+

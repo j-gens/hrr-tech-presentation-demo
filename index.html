@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <div id="app-ex-1">
+      <h3>Example 1 here:</h3>
+      <p>
+        The data and the DOM are now linked under the hood...
+      </p>
+      <p> {{ banana }} </p>
+      <button v-on:click="orange">Reverse Me</button>
+    </div>
+
+    <div id="app-ex-2">
+      <h3>Example 2 here:</h3>
+      <p>
+        Like example 1, this also uses a special attribute ( prefixed with v- ) called a directive.  This allows data binding to the structure of the DOM (not just text and attributes!)
+      </p>
+      <p v-if="seen">
+        Using only the mustache tag: {{ apple }}
+      </p>
+      <p v-if="seen">
+        Using v-html tag: <span v-html="apple"></span>
+      </p>
+    </div>
+
+    <div id="app-ex-3">
+      <h3>Example 3 here:</h3>
+      <ol>
+        <fruit-basket
+          v-for="item in basket"
+          v-bind:fruit="item"
+          v-bind:key="item.id"
+        ></fruit-basket>
+      </ol>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
